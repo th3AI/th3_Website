@@ -11,7 +11,7 @@ import ChatbotToggle from "./components/ChatbotToggle";
 import Chatbot from "./components/Chatbot";
 import ContactForm from "./components/Contactform";
 import Footer from "./components/Footer";
-import GlowCursor from "./components/GlowCursor";
+import SplashCursor from "./components/SplashCursor";
 
 export default function HomePage() {
   const [typedText, setTypedText] = useState("");
@@ -19,25 +19,6 @@ export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showChatbot, setShowChatbot] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
-
-  // Check for touch devices
-  useEffect(() => {
-    const checkTouchDevice = () => {
-      setIsTouchDevice(
-        'ontouchstart' in window ||
-        navigator.maxTouchPoints > 0 ||
-        navigator.msMaxTouchPoints > 0
-      );
-    };
-    
-    checkTouchDevice();
-    window.addEventListener('resize', checkTouchDevice);
-    
-    return () => {
-      window.removeEventListener('resize', checkTouchDevice);
-    };
-  }, []);
 
   // Typing animation effect
   useEffect(() => {
@@ -47,7 +28,7 @@ export default function HomePage() {
       currentIndex++;
       if (currentIndex === fullText.length) clearInterval(typingInterval);
     }, 50);
-    
+
     return () => clearInterval(typingInterval);
   }, []);
 
@@ -64,7 +45,7 @@ export default function HomePage() {
         top: offsetPosition,
         behavior: "smooth"
       });
-      
+
       // Reset scrolling state after animation completes
       setTimeout(() => setIsScrolling(false), 1000);
       setMenuOpen(false);
@@ -97,9 +78,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-black text-white scroll-smooth">
-      {/* Only show custom cursor for non-touch devices */}
-      {!isTouchDevice && <GlowCursor />}
-
       <Navbar 
         scrollToSection={scrollToSection} 
         setMenuOpen={setMenuOpen} 
@@ -167,6 +145,8 @@ export default function HomePage() {
       />
       
       <Footer />
+      <SplashCursor />
     </div>
+    
   );
 }

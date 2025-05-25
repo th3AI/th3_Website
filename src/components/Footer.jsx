@@ -59,9 +59,6 @@ export default function Footer() {
           <div className="space-y-8 mb-12 xl:mb-0">
             <div className="flex items-center space-x-2">
               <img src={logo} className="h-10 w-auto" alt="th3 logo" />
-              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-white">
-                th3
-              </span>
             </div>
             <p className="text-white/70 max-w-xs">
               Building the future of AI-powered automation and intelligent systems.

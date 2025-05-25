@@ -22,14 +22,3 @@ font-family: 'Playfair Display-bold';
 padding: 2rem;
 }
 
-/* Hide default cursor */
-html, body, a, button, [data-cursor-hover] {
-  cursor: none !important;
-}
-
-/* Show default cursor for touch devices */
-@media (pointer: coarse) {
-  html, body, a, button, [data-cursor-hover] {
-    cursor: default !important;
-  }
-}
