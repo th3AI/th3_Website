@@ -68,7 +68,7 @@ export default function Navbar({ scrollToSection, setMenuOpen, menuOpen }) {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed top-0 left-1/2 transform -translate-x-1/2 z-50 bg-white/5 backdrop-blur-lg border border-white/20 rounded-full px-4 sm:px-6 py-3 flex items-center justify-between w-full max-w-6xl mx-4 shadow-lg hover:shadow-cyan-500/10 transition-all duration-300"
+        className="fixed top-0 left-1/2 transform -translate-x-1/2 z-50 bg-white/5 backdrop-blur-lg border border-white/20 rounded-full px-4 sm:px-6 py-3 flex items-center justify-between w-full max-w-6xl shadow-lg hover:shadow-cyan-500/10 transition-all duration-300"
       >
         <motion.div 
           whileHover={{ scale: 1.05 }}
