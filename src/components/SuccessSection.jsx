@@ -7,7 +7,7 @@ export default function SuccessSection() {
       value: "90%", 
       desc: "In content creation across client campaigns",
       icon: "⏱️",
-      color: "from-cyan-400 to-blue-500",
+      color: "from-[#6A1E55] to-[#A64D79]",
       delay: 0.1
     },
     { 
@@ -15,15 +15,15 @@ export default function SuccessSection() {
       value: "2024", 
       desc: "Launch of AI-Powered Post Engine",
       icon: "🚀",
-      color: "from-purple-400 to-indigo-500",
+      color: "from-[#3B1C32] to-[#6A1E55]",
       delay: 0.2
     },
     { 
       title: "Client Feedback", 
       value: "Game Changer", 
-      desc: "“With th3's platform, we went from idea to post in seconds.”",
+      desc: "“With our platform, we went from idea to post in seconds.”",
       icon: "💬",
-      color: "from-amber-400 to-orange-500",
+      color: "from-[#8D3173] to-[#C47AAE]",
       delay: 0.3
     },
   ];
@@ -31,19 +31,19 @@ export default function SuccessSection() {
   const results = [
     {
       text: "Average 87% reduction in content production time",
-      color: "text-cyan-400"
+      color: "text-[#A64D79]"
     },
     {
       text: "28% higher engagement on AI-optimized posts",
-      color: "text-purple-400"
+      color: "text-[#6A1E55]"
     },
     {
       text: "92% client retention rate",
-      color: "text-amber-400"
+      color: "text-[#D89CC1]"
     },
     {
       text: "5x faster campaign iteration cycles",
-      color: "text-cyan-400"
+      color: "text-[#A64D79]"
     }
   ];
 
@@ -53,52 +53,55 @@ export default function SuccessSection() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      viewport={{ once: true, margin: "-100px" }}
-      className="py-20 px-6 text-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+      className="py-20 px-6 text-center bg-[linear-gradient(145deg,#000000_0%,#0a0a0a_50%,#000000_100%)] relative"
     >
-      <div className="max-w-6xl mx-auto">
-        <motion.div
+      {/* Mirror black background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] opacity-10"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[#6A1E55]/10 blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 rounded-full bg-[#A64D79]/10 blur-3xl animate-pulse delay-1000"></div>
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-12"
+          className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#D89CC1] to-[#A64D79]"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-200">
-            Setting Industry Benchmarks
-          </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Our <span className="text-cyan-300 font-medium">AI-powered platform</span> revolutionized how brands <span className="text-purple-300 font-medium">scale content creation</span> and <span className="text-amber-300 font-medium">engage audiences</span>.
-          </p>
-        </motion.div>
+          Proven Success Metrics
+        </motion.h2>
+        
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="max-w-3xl mx-auto text-xl text-[#EEEEEE] mb-12"
+        >
+          Our <span className="text-[#A64D79] font-medium">AI solutions</span> consistently deliver <span className="text-[#6A1E55] font-medium">measurable results</span> that <span className="text-[#D89CC1] font-medium">transform businesses</span>
+        </motion.p>
 
-        <div className="grid gap-6 sm:grid-cols-3 max-w-6xl mx-auto mb-16">
-          {stats.map((stat, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16">
+          {stats.map((stat, index) => (
             <motion.div
-              key={i}
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.5, 
-                delay: stat.delay,
-                type: "spring",
-                stiffness: 100
-              }}
+              transition={{ duration: 0.5, delay: stat.delay }}
               whileHover={{ 
                 y: -10,
-                borderColor: "rgba(34, 211, 238, 0.3)"
+                boxShadow: "0 0 20px rgba(166, 77, 121, 0.3)"
               }}
-              viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-              className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 hover:border-cyan-400/30 transition-all duration-300 h-full"
+              className="bg-[#0a0a0a]/50 backdrop-blur-sm p-8 rounded-2xl border border-[#3B1C32] hover:border-[#A64D79] transition-all duration-300"
             >
-              <div className={`w-14 h-14 rounded-xl flex items-center justify-center text-2xl mb-4 mx-auto bg-gradient-to-br ${stat.color}`}>
+              <div className={`text-5xl mb-6 w-16 h-16 rounded-full flex items-center justify-center mx-auto bg-gradient-to-br ${stat.color} shadow-[0_0_15px_rgba(166,77,121,0.3)]`}>
                 {stat.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">{stat.title}</h3>
-              <p className="text-3xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-200">
+              <h3 className="text-2xl font-semibold mb-3 text-white">{stat.title}</h3>
+              <p className="text-3xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#D89CC1] to-[#A64D79]">
                 {stat.value}
               </p>
-              <p className="text-white/70 text-sm md:text-base">{stat.desc}</p>
+              <p className="text-[#EEEEEE]/80">{stat.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -106,20 +109,23 @@ export default function SuccessSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm p-8 rounded-2xl border border-cyan-400/20 max-w-4xl mx-auto text-left"
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="mt-16 bg-[#1A1A1D]/70 backdrop-blur-sm p-8 rounded-2xl border border-[#6A1E55]/30 max-w-4xl mx-auto text-left shadow-[0_0_20px_rgba(106,30,85,0.2)]"
         >
-          <h3 className="text-2xl font-semibold mb-4 text-cyan-300">Proven Results</h3>
-          <p className="text-white/80 mb-6">
-            Our clients consistently report <span className="font-medium">3-5x improvement</span> in content velocity and engagement metrics.
+          <h3 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#A64D79] to-[#D89CC1]">Quantifiable Impact</h3>
+          <p className="text-[#EEEEEE]/80 mb-4">
+            Our clients experience <span className="font-medium text-[#A64D79]">significant improvements</span> across all key performance indicators with our AI solutions.
           </p>
-          <ul className="text-white/80 space-y-3">
+          <ul className="text-[#EEEEEE]/80 space-y-2">
             {results.map((result, index) => (
-              <li key={index} className="flex items-start">
-                <span className={`${result.color} mr-2`}>•</span>
+              <motion.li 
+                key={index}
+                whileHover={{ x: 5 }}
+                className="flex items-start"
+              >
+                <span className={`${result.color} mr-2 font-bold`}>•</span>
                 <span>{result.text}</span>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </motion.div>

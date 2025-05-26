@@ -52,7 +52,7 @@ export default function Footer() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="bg-gradient-to-r from-gray-900 via-black to-gray-900 border-t border-white/10"
+      className="bg-gradient-to-r from-brown-900 via-gray to-gray-900 border-t border-white/10"
     >
       <div className="max-w-7xl mx-auto px-6 py-16 sm:py-20">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">

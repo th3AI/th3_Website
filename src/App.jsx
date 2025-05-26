@@ -11,7 +11,7 @@ import ChatbotToggle from "./components/ChatbotToggle";
 import Chatbot from "./components/Chatbot";
 import ContactForm from "./components/Contactform";
 import Footer from "./components/Footer";
-import SplashCursor from "./components/SplashCursor";
+// import SplashCursor from "./components/SplashCursor";
 
 export default function HomePage() {
   const [typedText, setTypedText] = useState("");
@@ -145,7 +145,7 @@ export default function HomePage() {
       />
       
       <Footer />
-      <SplashCursor />
+      {/* <SplashCursor /> */}
     </div>
     
   );
