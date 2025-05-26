@@ -88,7 +88,8 @@ export default function HeroSection({ typedText, scrollToSection }) {
           transition={{ delay: 0.6, duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="text-xl md:text-3xl mb-12 max-w-3xl mx-auto text-[#f0f0f0] px-4 font-light"
         >
-          th3 delivers <span className="text-[#d89cc1] font-medium drop-shadow-[0_0_10px_rgba(216,156,193,0.5)]">AI-driven solutions</span> and <span className="text-[#c47aae] font-medium drop-shadow-[0_0_10px_rgba(196,122,174,0.4)]">from chatbots to automation</span> redefining how brands create and publish content.
+          From intelligent chatbots to breakthrough automation - 
+          <span className="text-[#d89cc1] font-medium drop-shadow-[0_0_10px_rgba(216,156,193,0.5)]">th3 empowers businesses with scalable</span> , <span className="text-[#c47aae] font-medium drop-shadow-[0_0_10px_rgba(196,122,174,0.4)]">AI-driven solutions.</span>
         </motion.p>
 
         <motion.div

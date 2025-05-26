@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Navbar from "./components/Navbar";
-import MobileMenu from "./components/MobileMenu";
 import HeroSection from "./components/HeroSection";
 import WhyTh3Section from "./components/WhyTh3Section";
 import OfferingsSection from "./components/OfferingsSection";
@@ -83,13 +82,6 @@ export default function HomePage() {
         setMenuOpen={setMenuOpen} 
         menuOpen={menuOpen} 
       />
-      
-      {menuOpen && (
-        <MobileMenu 
-          scrollToSection={scrollToSection} 
-          closeMenu={() => setMenuOpen(false)} 
-        />
-      )}
 
       <main>
         <section id="home" className="scroll-mt-20" aria-label="Hero section">
