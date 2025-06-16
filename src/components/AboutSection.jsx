@@ -30,7 +30,7 @@ export default function AboutSection() {
       window.open('https://calendly.com/indiestats558', '_blank');
     } else {
       // Show alternative contact methods
-      alert('You can reach us at:\n\nPhone: +1 (123) 456-7890\nEmail: contact@yourdomain.com\n\nWe look forward to connecting with you!');
+      alert('You can reach us at:\n\nPhone: +91 73300 78888\nEmail: th3ai.labs@gmail.com\n\nWe look forward to connecting with you!');
     }
   };
 

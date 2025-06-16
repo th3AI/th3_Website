@@ -154,7 +154,7 @@ export default function ContactForm() {
             <div className="w-10 h-10 rounded-full bg-[#6A1E55]/30 flex items-center justify-center text-[#D89CC1]">
               📞
             </div>
-            <span>+91 73805 25670</span>
+            <span>+91 73300 78888</span>
           </div>
           <div className="flex items-center justify-center gap-3">
             <div className="w-10 h-10 rounded-full bg-[#6A1E55]/30 flex items-center justify-center text-[#D89CC1]">
