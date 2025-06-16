@@ -116,13 +116,6 @@ export default function HomePage() {
       {/* Chatbot container with responsive sizing */}
       {showChatbot && (
         <div 
-          className={`
-            fixed bottom-24 right-6 
-            w-full max-w-md h-[70vh] max-h-[600px] 
-            bg-gray-900 rounded-lg shadow-xl z-40 
-            overflow-hidden transition-all duration-300
-            border border-white/10
-          `}
           aria-live="polite"
           aria-atomic="true"
         >
@@ -133,7 +126,6 @@ export default function HomePage() {
       <ChatbotToggle 
         showChatbot={showChatbot} 
         setShowChatbot={setShowChatbot} 
-        isScrolling={isScrolling}
       />
       
       <Footer />

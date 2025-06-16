@@ -9,6 +9,18 @@ export default function AboutSection() {
     { name: "App Development", color: "text-[#6A1E55]" },
     { name: "Cloud Solutions", color: "text-[#D89CC1]" }
   ];
+   
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    } else {
+      console.error(`Element with id ${sectionId} not found`);
+    }
+  };
 
   return (
     <motion.section 
@@ -60,6 +72,7 @@ export default function AboutSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection("langchain-chatbot")}
             className="border-2 border-[#A64D79] hover:border-[#D89CC1] text-[#D89CC1] hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300"
           >
             View Our Work

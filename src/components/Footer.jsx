@@ -17,7 +17,7 @@ export default function Footer() {
       title: "Company",
       items: [
         { name: "About", href: "#about" },
-        { name: "Careers", href: "#" },
+        { name: "Careers", href: "#success" },
         { name: "Blog", href: "#" },
       ],
     },
@@ -26,7 +26,7 @@ export default function Footer() {
       items: [
         { name: "Documentation", href: "#" },
         { name: "API Reference", href: "#" },
-        { name: "Help Center", href: "#" },
+        { name: "Help Center", href: "#contacts" },
       ],
     },
     {
@@ -40,9 +40,9 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: <FaLinkedin size={20} />, href: "#" },
+    { icon: <FaLinkedin size={20} />, href: "https://www.linkedin.com/in/akashtiwari558/" },
     { icon: <FaTwitter size={20} />, href: "#" },
-    { icon: <FaGithub size={20} />, href: "#" },
+    { icon: <FaGithub size={20} />, href: "https://github.com/th3AI" },
     { icon: <FaDiscord size={20} />, href: "#" },
     { icon: <SiNotion size={20} />, href: "#" },
   ];
