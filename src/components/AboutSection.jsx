@@ -22,6 +22,18 @@ export default function AboutSection() {
     }
   };
 
+  const handleDiscoveryCall = () => {
+    const userChoice = confirm('Would you like to schedule a discovery call?\n\nClick OK to open our booking system or Cancel to see other contact options.');
+    
+    if (userChoice) {
+      // Replace with your actual booking link
+      window.open('https://calendly.com/indiestats558', '_blank');
+    } else {
+      // Show alternative contact methods
+      alert('You can reach us at:\n\nPhone: +1 (123) 456-7890\nEmail: contact@yourdomain.com\n\nWe look forward to connecting with you!');
+    }
+  };
+
   return (
     <motion.section 
       id="about"
@@ -65,6 +77,7 @@ export default function AboutSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={handleDiscoveryCall}
             className="bg-gradient-to-r from-[#A64D79] to-[#6A1E55] hover:from-[#C47AAE] hover:to-[#8D3173] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-[#A64D79]/30"
           >
             Book a Discovery Call
